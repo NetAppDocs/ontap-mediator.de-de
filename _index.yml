@@ -1,0 +1,42 @@
+---
+indexpage:
+  title: ONTAP Mediator Dokumentation
+  summary: ONTAP Mediator unterstützt ONTAP Funktionen durch die Bereitstellung eines
+    persistenten und abgegrenzten Speichers für Hochverfügbarkeitsmetadaten (HA),
+    durch eine synchrone Funktion zur Abfrage des Node-Systemstatus zur Unterstützung
+    der Quorumbestimmung sowie als Ping-Proxy für die Controller-Erreichbarkeit.
+  keywords: mediator, ONTAP, high-availability, HA, metadata, quorum, controller,
+    liveliness, smbc, metrocluster, snapmirrror active sync
+  lead: ONTAP Mediator unterstützt SnapMirror active sync und MetroCluster IP, indem
+    ein persistenter und geschützter Speicher für Metadaten zur Hochverfügbarkeit
+    (HA) bereitgestellt wird, eine synchrone Abfrage des Node-Systemstatus zur Unterstützung
+    der Quorumbestimmung erfolgt und ein Ping-Proxy für die Controller-Verfügbarkeit
+    bereitgestellt wird.
+  tiles:
+  - title: Los geht's
+    links:
+    - title: Erfahren Sie mehr über ONTAP Mediator
+      url: "/learn-about.html"
+    - title: Schnellstart
+      url: "/quick-start.html"
+    - title: Versionshinweise
+      url: "/release-notes/whats-new-in-ontap-mediator.html"
+  - title: Installation, Upgrade und Konfiguration
+    links:
+    - title: Installieren Sie ONTAP Mediator
+      url: "/install/workflow-summary.html"
+    - title: Upgrade von ONTAP Mediator
+      url: "/administer/upgrade-ontap-mediator-task.html"
+    - title: Einsatz von ONTAP Mediator für SnapMirror active sync und MetroCluster
+        IP
+      url: "/use-mediator-snapmirror-metrocluster-task.html"
+  - title: Weitere Ressourcen
+    links:
+    - title: ONTAP 9 Dokumentation
+      url: https://docs.netapp.com/us-en/ontap/
+    - title: MetroCluster Dokumentation
+      url: https://docs.netapp.com/us-en/ontap-metrocluster/
+    - title: ONTAP REST API Referenz
+      url: https://docs.netapp.com/us-en/ontap-restapi/
+    - title: ONTAP CLI-Referenz
+      url: https://docs.netapp.com/us-en/ontap-cli/

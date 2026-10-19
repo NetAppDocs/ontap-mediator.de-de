@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: install/workflow-summary.html 
+keywords: cluster, setup, set up get started, workflow, summary 
+summary: NetApp empfiehlt die Verwendung von System Manager zum Einrichten neuer Cluster. System Manager bietet einen einfachen und unkomplizierten Workflow für die Cluster-Einrichtung, einschließlich der Zuweisung einer Node-Management-IP-Adresse und der Initialisierung des Clusters. 
+---
+= Zusammenfassung des Installationsablaufs von ONTAP Mediator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Installation von ONTAP Mediator umfasst die Vorbereitung der Installation, die Bereitstellung des Zugriffs auf die Repositories, das Herunterladen des Installationspakets, die Überprüfung der Codesignatur und die Installation des ONTAP Mediator Pakets.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]link:prepare-install.html["Vorbereitung der Installation des ONTAP Mediators"]
+[role="quick-margin-para"]
+Für die Installation von ONTAP Mediator muss sichergestellt sein, dass alle Voraussetzungen erfüllt sind.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]link:enable-access-repos-task.html["Repository-Zugriff bereitstellen"]
+[role="quick-margin-para"]
+Der Zugriff auf die Repositories sollte aktiviert werden, damit ONTAP Mediator während des Installationsprozesses auf die benötigten Pakete zugreifen kann.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]link:download-install-pkg-task.html["Das Installationspaket für ONTAP Mediator herunterladen"]
+[role="quick-margin-para"]
+Das ONTAP Mediator Installationspaket steht auf der ONTAP Mediator Downloadseite zum Herunterladen bereit.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]link:verify-code-signature-task.html["Die Codesignatur des ONTAP Mediator Installationspakets überprüfen"]
+[role="quick-margin-para"]
+NetApp empfiehlt, die ONTAP Mediator-Code-Signatur vor der Installation des ONTAP Mediator Installationspakets zu überprüfen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Fünf"]link:install-mediator-pkg-task.html["Das ONTAP Mediator Installationspaket installieren"]
+[role="quick-margin-para"]
+Das Installationspaket wird heruntergeladen und das Installationsprogramm auf dem Host ausgeführt.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sechs"]link:verify-install-task.html["Die Installation des ONTAP Mediators überprüfen"]
+[role="quick-margin-para"]
+Nach der Installation von ONTAP Mediator sollte überprüft werden, ob dieser erfolgreich ausgeführt wird.

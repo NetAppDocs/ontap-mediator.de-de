@@ -1,0 +1,225 @@
+---
+permalink: release-notes/whats-new-in-ontap-mediator.html 
+sidebar: sidebar 
+keywords: 'mediator, new, release, update, install, what"s new' 
+summary: Neue Funktionen des ONTAP Mediator sind in jeder Version enthalten. 
+---
+= Was ist neu in ONTAP Mediator?
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit jeder neuen Version von ONTAP Mediator werden neue Verbesserungen bereitgestellt.
+
+
+NOTE: Informationen zur OS- und SCST-Version sind unter link:support-matrix.html["Supportmatrix"] verfügbar.
+
+[cols="25,75"]
+|===
+
+
+| ONTAP Mediator Version | Verbesserungen 
+
+
+ a| 
+1.12.1
+ a| 
+* Unterstützung für RHEL:
++
+** Kompatibel: 10.1 und 9.7.
+** Empfohlen: 10.2, 10.0, 9.8, 9.6, 9.4 und 8.10.
+
+
+* Unterstützung für Rocky Linux 10.2, 9.8 und 8.10.
+* Unterstützung für Oracle Linux 10.1 und 9.8 mit sowohl rhck- als auch uek-Kerneln.
+* Ab ONTAP Mediator 1.12.1 und ONTAP 9.19.1 kann eine einzelne, mit HTTPS konfigurierte ONTAP Mediator Instanz die folgenden Konfigurationen gleichzeitig überwachen:
++
+** Maximal zehn Vier-Knoten- oder fünf Acht-Knoten MetroCluster IP-Konfigurationen bei Installation auf einem Host mit 8-Kern-CPU und mindestens 16GB RAM. Weitere Informationen unter link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html#mediator-multiple-mccip["ONTAP Mediator zur Überwachung mehrerer MetroCluster IP Konfigurationen verwenden"^].
+** Eine MetroCluster IP Konfiguration mit vier Knoten und eine SnapMirror active sync Peer-Beziehung, wenn sie auf einem Host mit einer 2-Kern-CPU installiert ist. Weitere Informationen unter link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/mediator-install-task.html#ontap-mediator["Den ONTAP Mediator für SnapMirror Active Sync konfigurieren"^].
+
+
+* Enthält ein neues Tool zur Reparatur einer beschädigten SCST-Installation. Nach der Installation von ONTAP Mediator befindet sich das Tool unter  `/usr/local/bin/mediator_repair_scst`. Das Tool kann nach einem Betriebssystem-Upgrade verwendet werden, wenn das aktualisierte Betriebssystem einen SCST-Patch benötigt, der im Standard-SCST-Paket nicht verfügbar ist.
+
+
+
+
+ a| 
+1,12
+ a| 
+* Unterstützung für RHEL:
++
+** Kompatibel: 10.1 und 9.7.
+** Empfohlen: 10.2, 10.0, 9.8, 9.6, 9.4 und 8.10.
+
+
+* Unterstützung für Rocky Linux 10.2, 9.8 und 8.10.
+* Unterstützung für Oracle Linux 10.1 und 9.7 mit sowohl rhck- als auch uek-Kerneln.
+* Ab ONTAP 9.19.1 und ONTAP Mediator 1.12 kann ein ONTAP Mediator konfiguriert werden, der HTTPS für die Kommunikation in MetroCluster IP-Konfigurationen verwendet. HTTPS bietet erhöhte Sicherheit, indem gesamte Sitzungen mit SSL/TLS verschlüsselt werden. Es besteht die Möglichkeit, ONTAP Mediator ausschließlich mit Unterstützung für HTTPS zu installieren. Das SCST-Paket wird bei Verwendung dieser Installationsmethode nicht installiert. link:../install/prepare-install.html#https-iscsi-installation["Erfahren Sie mehr über die HTTPS- und iSCSI-Installationsoptionen für ONTAP Mediator"].
+
+
+
+
+ a| 
+1,11
+ a| 
+* Unterstützung für RHEL 10.1, 10.0, 9.7, 9.6, 9.4 und 8.10.
+* Unterstützung für Rocky Linux 10.1, 9.7 und 8.10.
+* Unterstützung für Oracle Linux 10.0 und 9.6 mit sowohl rhck- als auch uek-Kerneln.
+* Fügt Unterstützung für IPv6 für MetroCluster IP-Konfigurationen hinzu.
+* Unterstützung für fapolicyd wurde hinzugefügt.
+
+
+
+
+ a| 
+1,10
+ a| 
+* Unterstützung für RHEL 10.0, 9.6, 9.4 und 8.10.
+* Unterstützung für Rocky Linux 10.0, 9.6 und 8.10.
+* Die Basis-Python-Version wird von Python 3.9 auf Python 3.12 aktualisiert.
+
+
+
+
+ a| 
+1.9.1
+ a| 
+* Unterstützung für RHEL:
++
+** Kompatibel: 9.3, 9.1, 8.9, 8.7, 8.6, 8.5 und 8.4.
+** Empfohlen: 9.5, 9.4, 9.2, 9.0, 8.10 und 8.8.
+
+
+* Unterstützung für Rocky Linux 9.5 und 8.10.
+* Fügt neue Zertifikate zur Überprüfung von Codesignaturen hinzu.
+* Unterstützung für das Überspringen von Codesignaturprüfungen mit dem  `-skip-code-signature-check` Flag hinzugefügt.
+* Das Installationsprogramm zeigt Warnungen an, wenn es abgelaufene Codesignaturzertifikate erkennt.
+
+
+
+
+ a| 
+1,9
+ a| 
+* Unterstützung für RHEL:
++
+** Kompatibel: 9.3, 9.1, 8.9, 8.7, 8.6, 8.5 und 8.4.
+** Empfohlen: 9.5, 9.4, 9.2, 9.0, 8.10 und 8.8.
+
+
+* Unterstützung für Rocky Linux 9.5 und 8.10.
+* FIPS-Unterstützung für RHEL und Rocky Linux.
+* Zusätzliche Leistungsverbesserungen für größere Skalierbarkeit.
+* Verbesserte Dateinamen zur Vereinfachung der Einrichtung von PKI-signierten Zertifikaten.
+
+
+
+
+ a| 
+1,8
+ a| 
+* Unterstützung für RHEL:
++
+** Kompatibel: 8.7, 8.6, 8.5 und 8.4.
+** Empfohlen: 9.4, 9.3, 9.2, 9.1, 9.0, 8.10, 8.9 und 8.8.
+
+
+* Unterstützung für Rocky Linux 9.4 und 8.10.
+
+
+
+
+ a| 
+1,7
+ a| 
+* Unterstützung für RHEL:
++
+** Kompatibel: 8.7, 8.6, 8.5 und 8.4.
+** Empfohlen: 9.3, 9.2, 9.1, 9.0, 8.9 und 8.8.
+
+
+* Unterstützung für Rocky Linux 9.3 und 8.9.
+* Unterstützung für SAN (Subject Alternative Name) Daten in selbstsignierten Zertifikaten und von Drittanbietern signierten Zertifikaten.
+
+
+
+
+ a| 
+1,6
+ a| 
+* Python 3.9 Updates.
+* Unterstützung für RHEL:
++
+** Kompatibel: 8.7, 8.6, 8.5 und 8.4.
+** Empfohlen: 9.2, 9.1, 9.0 und 8.8.
+
+
+* Unterstützung für Rocky Linux 9.2 und 8.8.
+* Die Unterstützung für RHEL 7.x / CentOS alle Versionen wurde eingestellt.
+
+
+
+
+ a| 
+1,5
+ a| 
+* Unterstützung für RHEL 8.5, 8.4, 8.3, 8.2, 8.1, 8.0, 7.9, 7.8, 7.7 und 7.6.
+* Unterstützung für CentOS 7.9, 7.8, 7.7 und 7.6.
+* Enthält Warnungen zur Einstellung des Supports für RHEL 7.x / CentOS 7.x.
+* Optimiert die Geschwindigkeit für größere SnapMirror active sync Systeme.
+* Dem Installationsprogramm wurde eine kryptografische Codesignatur hinzugefügt.
+
+
+
+
+ a| 
+1,4
+ a| 
+* Unterstützung für RHEL 8.5, 8.4, 8.3, 8.2, 8.1, 8.0, 7.9, 7.8, 7.7 und 7.6.
+* Unterstützung für CentOS 7.9, 7.8, 7.7 und 7.6.
+* Unterstützung für Secure Boot (SB) von UFEI-basierter Firmware wurde hinzugefügt.
+
+
+
+
+ a| 
+1,3
+ a| 
+* Unterstützung für RHEL 8.3, 8.2, 8.1, 8.0, 7.9, 7.8, 7.7 und 7.6.
+* Unterstützung für CentOS 7.9, 7.8, 7.7 und 7.6.
+
+
+
+
+ a| 
+1,2
+ a| 
+* Unterstützung für RHEL 8.1, 8.0, 7.9, 7.8, 7.7 und 7.6.
+* Unterstützung für CentOS 7.9, 7.8, 7.7 und 7.6.
+* Unterstützung für HTTPS-Mailboxen.
+* Zur Verwendung mit ONTAP 9.8+ MCC-IP AUSO und SnapMirror active sync ZRTO.
+
+
+
+
+ a| 
+1,1
+ a| 
+* Unterstützung für RHEL 8.0 und 7.6.
+* Unterstützung für CentOS 7.6.
+* Entfernt Perl-Abhängigkeiten.
+
+
+
+
+ a| 
+1,0
+ a| 
+* Unterstützung für iSCSI Mailboxen.
+* Zur Verwendung mit ONTAP 9.7+ MCC-IP AUSO.
+* Unterstützung für RHEL/CentOS 7.6.
+
+
+|===

@@ -1,0 +1,70 @@
+---
+permalink: administer/start-stop-mediator-task.html 
+sidebar: sidebar 
+keywords: mediator, start, stop, service, systemctl 
+summary: ONTAP Mediator und SCST auf dem Host starten oder stoppen. 
+---
+= ONTAP Mediator starten und stoppen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zum Warten des Hosts oder zum erneuten Aktivieren des Dienstes können ONTAP Mediator und SCST angehalten oder neu gestartet werden.
+
+
+
+[[stop-ontap-mediator]]
+== ONTAP Mediator stoppen
+
+Um ONTAP Mediator zu beenden, sind die folgenden Schritte erforderlich:
+
+.Schritte
+. ONTAP Mediator anhalten:
++
+[source, cli]
+----
+systemctl stop ontap_mediator
+----
+. SCST anhalten:
++
+[source, cli]
+----
+systemctl stop mediator-scst
+----
+. ONTAP Mediator und SCST deaktivieren:
++
+[source, cli]
+----
+systemctl disable ontap_mediator mediator-scst
+----
+
+
+
+
+[[start-ontap-mediator]]
+== Starten von ONTAP Mediator
+
+Um ONTAP Mediator wieder zu aktivieren, sind die folgenden Schritte erforderlich:
+
+.Schritte
+. ONTAP Mediator und SCST aktivieren:
++
+[source, cli]
+----
+systemctl enable ontap_mediator mediator-scst
+----
+. SCST starten:
++
+[source, cli]
+----
+systemctl start mediator-scst
+----
+. ONTAP Mediator wird gestartet:
++
+[source, cli]
+----
+systemctl start ontap_mediator
+----
+

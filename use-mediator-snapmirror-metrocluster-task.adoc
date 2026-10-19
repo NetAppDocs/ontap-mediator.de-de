@@ -1,0 +1,50 @@
+---
+permalink: use-mediator-snapmirror-metrocluster-task.html 
+sidebar: sidebar 
+keywords: ONTAP, mediator, SnapMirror active sync, MetroCluster IP, quorum witness, MAUSO 
+summary: Dieser Abschnitt erläutert, wie ONTAP Mediator SnapMirror Active Sync-Beziehungen und MetroCluster IP-Konfigurationen überwacht und wie viele davon eine einzelne Instanz gleichzeitig überwachen kann. 
+---
+= Einsatz von ONTAP Mediator für SnapMirror active sync und MetroCluster IP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Mediator läuft auf einem Linux Host in einer dritten Ausfalldomäne, getrennt von Ihren ONTAP Clustern, und stellt dort einen persistenten, abgeschotteten Speicher für Hochverfügbarkeitsmetadaten bereit. ONTAP nutzt diesen Speicher zusammen mit der Systemstatusabfrage und den Ping Proxy Funktionen des Mediators, um SnapMirror Active Sync Beziehungen und MetroCluster IP Konfigurationen zu überwachen.
+
+
+NOTE: Diese Dokumentation bezieht sich auf die lokale Version von ONTAP Mediator. Informationen zu ONTAP Cloud Mediator, das ab ONTAP 9.17.1 verfügbar ist, enthält die link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror active sync Dokumentation"^].
+
+
+
+[[monitor-snapmirror-active-sync-relationships]]
+== Aktive Synchronisierungsbeziehungen von SnapMirror überwachen
+
+SnapMirror active sync nutzt ONTAP Mediator als passiven Zeugen für die primäre und die Spiegelkopie in einer Konsistenzgruppe. Wenn eine Netzwerkpartition auftritt oder eine Kopie nicht mehr verfügbar ist, fragt SnapMirror active sync ONTAP Mediator ab, um zu bestimmen, welche Kopie weiterhin E/A bereitstellt, und stellt E/A auf der anderen Kopie ein.
+
+Ab ONTAP 9.8 können Sie jede Version von ONTAP Mediator verwenden, um eine SnapMirror active sync Beziehung zu überwachen.
+
+
+NOTE: Grenzwerte für die Anzahl der SnapMirror Active Sync Cluster-Paare, die von einer einzelnen ONTAP Mediator-Instanz überwacht werden können, sind unter link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/limits-reference.html["Objektbeschränkungen für ONTAP SnapMirror active sync"^] beschrieben.
+
+link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/mediator-install-task.html["Den ONTAP Mediator für SnapMirror Active Sync konfigurieren"^]
+
+
+
+[[monitor-metrocluster-ip-configurations]]
+== Überwachung von MetroCluster IP Konfigurationen
+
+In einer MetroCluster IP Konfiguration speichert ONTAP Mediator Statusinformationen über die MetroCluster Knoten in Mailbox-LUNs und unterstützt die Knoten mit einem Mediator-gestützten automatischen ungeplanten Switchover (MAUSO) im Falle einer Katastrophe oder bestimmter Fehlerszenarien.
+
+Ab ONTAP 9.19.1 und ONTAP Mediator 1.12 können Sie einen ONTAP Mediator konfigurieren, der HTTPS zur Kommunikation nutzt, um Ihre MetroCluster IP-Konfiguration zu überwachen. Wenn Sie ONTAP Mediator mit dem iSCSI-Protokoll konfigurieren, können Sie jede Version des ONTAP Mediators zur Überwachung einer MetroCluster IP-Konfiguration verwenden.
+
+
+NOTE: Die Beschränkungen für die Anzahl der MetroCluster IP-Konfigurationen, die eine einzelne ONTAP Mediator Instanz überwachen kann, sind unter link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html#mediator-multiple-mccip["ONTAP Mediator zur Überwachung mehrerer MetroCluster IP Konfigurationen verwenden"^] beschrieben.
+
+link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html["Konfiguration von ONTAP Mediator für eine MetroCluster IP-Konfiguration"^]
+
+.Verwandte Informationen
+* link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/architecture-concept.html["ONTAP SnapMirror Active Sync-Architektur"^]
+* link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept-ontap-mediator-supports-automatic-unplanned-switchover.html["Informationen zur ONTAP Mediator Unterstützung für die automatische ungeplante Umschaltung in einer MetroCluster IP Konfiguration"^]
+
